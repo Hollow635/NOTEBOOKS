@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-image: url('../imagenes/compus.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0000007a;
+    padding: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 80px;
+    margin-right: 10px;
+}
+
+.header-text p {
+    margin: 0;
+    color: white; 
+}
+
+.auth-buttons button {
+    padding: 20px 25px;
+    border-radius: 30px;
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+}
+
+.auth-buttons button:hover {
+    color: #fff;
+    background: #ff0000;
+}
+
+main {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+main h1 {
+    color: #333;
+}
+
+main p {
+    color: #555;
+}
+
+main a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}

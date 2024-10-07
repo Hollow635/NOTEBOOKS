@@ -1,0 +1,261 @@
+body {
+    margin: 0; /* Asegúrate de que no haya margen */
+    font-family: Arial, sans-serif;
+    background-image: url('../imagenes/compus.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; /* Asegúrate de que se mantenga en fila */
+    align-items: center;
+    justify-content: space-between; /* O ajusta según sea necesario */
+    background-color: #ff3232;
+    padding: 10px 20px;
+    width: 100%; 
+    box-sizing: border-box;
+    overflow: hidden; /* Evita que el contenido se desborde */
+}
+
+.logo-container {
+    flex: 0 0 auto;
+}
+
+.logo {
+    width: 80px; 
+    height: auto;
+}
+
+.logo-container .logo {
+    width: 50px;
+    vertical-align: middle;
+}
+
+.menu {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.menu-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-item {
+    padding: 10px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.menu-item:not(:last-child) {
+    border-right: 1px solid #ffffff; 
+}
+
+.menu-item:hover {
+    background-color: #ff4d4d; 
+}
+
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.status-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.status-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; 
+    gap: 50px; 
+    max-width: 900px; 
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px; 
+    border-radius: 8px;
+}
+
+.computer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.computer-item {
+    display: flex;
+    align-items: center;
+    gap: 25px; 
+    font-weight: bold;
+    color: #333;
+    cursor: pointer; 
+}
+
+.status {
+    width: 50px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.status-container {
+    display: flex;
+    flex-wrap: wrap; /* Esto permitirá que las listas de A-F y G-L se alineen mejor si necesitan espacio */
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+label {
+    font-size: 1.2em; /* Aumentar tamaño del texto */
+}
+input[type="number"],
+input[type="time"],
+input[type="submit"] {
+    font-size: 1.1em; /* Aumentar tamaño de los inputs */
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Para que el padding no afecte el ancho total */
+    margin-bottom: 15px; /* Espaciado entre inputs */
+}
+
+.available {
+    background-color: #4CAF50; 
+}
+
+.unavailable {
+    background-color: #FF3333; 
+}
+
+.maintenance {
+    background-color: #FFA500; 
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; 
+}
+
+/* Estilos para la modal */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; 
+    max-width: 600px; 
+    transition: transform 0.3s ease;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .status-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .computer-list {
+        gap: 5px;
+    }
+    .header {
+        padding: 10px; /* Ajusta el padding si es necesario */
+    }
+    .header h1 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente en móviles */
+    }
+    .menu-item {
+        padding: 5px 10px; /* Ajusta el padding para que se vea mejor */
+    }
+}
+
+@media (orientation: portrait) {
+    .header {
+        flex-direction: column; /* Cambia a columna si es necesario */
+        align-items: center; /* Centra los elementos */
+        padding: 15px; /* Ajusta el padding si es necesario */
+    }
+    .menu {
+        margin-top: 10px; /* Espaciado adicional entre logo y menú si cambias a columna */
+    }
+}
+
+.request-button {
+    background-color: #ff4d4d; /* Rojo */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.request-button:hover {
+    background-color: #ff3333;
+}
+
+.reserved {
+    background-color: #FFCC00; /* Color para las notebooks reservadas */
+}
+
+.success {
+    position: absolute;
+    top: 50px;
+    color: #00C83C;
+    font-size: 18px;
+}
+
+.resultado {
+    position: absolute;
+    top: 50px;
+    color: #00a2ff;
+    font-size: 18px;
+}
